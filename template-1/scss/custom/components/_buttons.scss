@@ -1,0 +1,158 @@
+.top-button{
+    position: fixed;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark;
+    bottom: 0;
+    right: 0;
+    margin: 0 20px 20px 0;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+    width: 2em;
+    height: 2em;
+    transition: all 3s ease-in-out;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
+
+    i{
+        -webkit-animation: bounce-out-top 1.7s linear infinite both;
+        animation: bounce-out-top 1.7s linear infinite both;
+    }
+
+    &:hover{
+        text-decoration: none;
+        color: white;
+
+
+
+        
+    }
+
+}
+@-webkit-keyframes bounce-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+    }
+    25% {
+        -webkit-transform: translateY(-3px);
+                transform: translateY(-3px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      75% {
+        -webkit-transform: translateY(3px);
+                transform: translateY(3px);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+      }
+  }
+@keyframes bounce-out-top {
+        0% {
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                -webkit-animation-timing-function: ease-out;
+                        animation-timing-function: ease-out;
+            }
+            25% {
+                -webkit-transform: translateY(-3px);
+                        transform: translateY(-3px);
+                -webkit-animation-timing-function: ease-in;
+                        animation-timing-function: ease-in;
+              }
+              75% {
+                -webkit-transform: translateY(3px);
+                        transform: translateY(3px);
+                -webkit-animation-timing-function: ease-in;
+                        animation-timing-function: ease-in;
+              }
+              100% {
+                -webkit-transform: translateY(0px);
+                        transform: translateY(0px);
+              }
+  }
+
+  #section10 a {
+        padding-top: 60px;
+    }
+
+    #section10 a span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        margin-left: -15px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+
+    #section10 a span::before {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: '';
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background-color: #fff;
+        border-radius: 100%;
+        -webkit-animation: sdb10 2s infinite;
+        animation: sdb10 2s infinite;
+        box-sizing: border-box;
+    }
+
+    @-webkit-keyframes sdb10 {
+        0% {
+            -webkit-transform: translate(0, 0);
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            -webkit-transform: translate(0, 20px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes sdb10 {
+        0% {
+            transform: translate(0, 0);
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            transform: translate(0, 20px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    
+

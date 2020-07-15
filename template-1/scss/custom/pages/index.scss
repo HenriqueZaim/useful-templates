@@ -1,0 +1,267 @@
+@import "../../main.scss";
+
+.principal-section {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, #000000fa, #00000059, #000000fa), url("../../../images/office-wallpaper.jpg");
+    background-position: right center;
+    height: 100vh;
+
+    .main-button {
+        font-size: 2.1rem;
+        padding: 1em 3em;
+        margin: 2.2em 0 0.6em 0;
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+
+        &:hover{
+            background-color: rgb(218, 214, 214);
+            color: $darker;
+        }
+    }
+}
+
+.content-section {
+    @include section(#f3f3f3, $dark);
+    background-image: url("../../../images/icons-bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.info-section {
+    background-image: url($img-link);
+    @include section($dark, white);
+}
+
+// TODO: classe genérica para highlight
+.highlight {
+    border-radius: 7px;
+    border-right: 4px solid darkcyan;
+    background-color: $darker;
+    transition: all 0.25s ease-in-out;
+
+    img {
+        filter: brightness(0.8);
+        transition: all 0.25s ease-in-out;
+    }
+
+    .highlight__text {
+        padding: 1em;
+        font-weight: bold;
+        border-left: 2px solid darkcyan;
+        border-right: 2px solid darkcyan;
+
+        p {
+            font-size: 1.5rem;
+            color: darkcyan;
+            transition: all 0.3s ease;
+        }
+
+        span {
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+    }
+
+    .highlight__text--button {
+        padding: 1em;
+    }
+
+    .highlight__text--header {
+        @extend .highlight__text;
+        border: 0;
+        text-align: left;
+        padding-left: 3em;
+
+        h3 {
+            padding-left: 1em;
+        }
+    }
+
+    &:hover {
+        background-color: $dark;
+        border-right: 4px solid cyan;
+
+        img {
+            filter: brightness(1);
+        }
+
+        .highlight__text {
+            p {
+                color: cyan;
+            }
+        }
+    }
+
+}
+
+.footer-header {
+    @include section($dark, white);
+    padding: 1rem;
+}
+
+.footer-body {
+    @include section(#2c2f33, white);
+}
+
+.footer-copyright {
+    @include section(#1b1d1f, white);
+    border-top: none;
+    padding: 0.8rem;
+
+    .row {
+        align-items: center;
+
+        @include media-query("desktop", $type:max) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.footer-link {
+    color: darkcyan;
+    transition: color 0.1s ease-in;
+
+    &:hover {
+        color: rgb(0, 255, 255);
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-weight: bold;
+    padding: 0 0 0.5em;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+@mixin link-style($bg-color, $color){
+    color: $color;
+    position: relative;
+    will-change: transform;
+    display: inline-block;
+    &::after{
+        background-color: $bg-color;
+        content: "";
+        height: 2px;
+        left: 0px;
+        position: absolute;
+        top: 100%;
+        transform: scaleX(0);
+        width: 100%;
+        transition: transform 0.25s ease 0s;
+    }
+    &:hover, &:focus, &:active{
+        &::after{
+            transform: scaleX(1);
+        }
+        text-decoration: none;
+        color: $bg-color;
+    }
+}
+
+.text-default-link{
+    @include link-style(rgb(1, 92, 92), darkcyan);
+}
+.text-default-secondary-link{
+    @include link-style(cyan, rgb(0, 185, 185));
+}
+
+@include media-query("phablet", $type: max) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .principal-section {
+        background-image: linear-gradient(to right, #000000fa, #000000ab), url("../../../images/wall1.jpeg");
+
+        .row {
+            text-align: center;
+        }
+
+        p:first-of-type {
+            font-size: 1.4rem;
+            padding: 0 1em;
+        }
+
+        p:last-of-type {
+            font-size: 1.7rem;
+        }
+
+        .main-button {
+            font-size: 1.3rem;
+            padding: 1em 2em;
+            margin-top: 1em;
+        }
+    }
+
+    .highlight {
+        border-right: 4px solid darkcyan;
+        border-left: 4px solid darkcyan;
+        padding: 1em;
+
+        img {
+            border-radius: 10px;
+        }
+
+        .highlight__text {
+            border: 0;
+            border-top: 1px solid darkcyan;
+
+        }
+
+        .highlight__text--button {
+            padding: 1em;
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .highlight__text--header {
+            border-left: 0;
+            text-align: center;
+            border-top: 0;
+            padding-left: 1em;
+
+            h3 {
+                padding-left: 0;
+            }
+        }
+
+    }
+}
+
+@include media-query("phablet", $type: min) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .principal-section {
+
+        p:first-of-type {
+            font-size: 2.4rem;
+        }
+
+        p:last-of-type {
+            font-size: 2.7rem;
+            line-height: 1.5em;
+        }
+    }
+
+}

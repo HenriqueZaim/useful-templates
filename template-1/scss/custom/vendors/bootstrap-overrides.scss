@@ -1,0 +1,70 @@
+/*!
+ * Bootstrap v4.4.0 (https://getBootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs../../../plugins/Bootstrap/scss/blob/master/LICENSE)
+ */
+$cyan: rgb(0,255,255);
+$darker: #2a2f34;
+
+$theme-colors: (
+    "dark": #1a1922,
+    "darker": #2a2f34,
+    "default": darkcyan,
+    "default-secondary": $cyan
+);
+
+@import "../../../plugins/Bootstrap/scss/functions";
+@import "../../../plugins/Bootstrap/scss/variables";
+@import "../../../plugins/Bootstrap/scss/mixins";
+@import "../../../plugins/Bootstrap/scss/root";
+@import "../../../plugins/Bootstrap/scss/reboot";
+@import "../../../plugins/Bootstrap/scss/type";
+@import "../../../plugins/Bootstrap/scss/images";
+@import "../../../plugins/Bootstrap/scss/code";
+@import "../../../plugins/Bootstrap/scss/grid";
+@import "../../../plugins/Bootstrap/scss/tables";
+@import "../../../plugins/Bootstrap/scss/forms";
+@import "../../../plugins/Bootstrap/scss/buttons";
+@import "../../../plugins/Bootstrap/scss/transitions";
+@import "../../../plugins/Bootstrap/scss/dropdown";
+@import "../../../plugins/Bootstrap/scss/button-group";
+@import "../../../plugins/Bootstrap/scss/input-group";
+@import "../../../plugins/Bootstrap/scss/custom-forms";
+@import "../../../plugins/Bootstrap/scss/nav";
+@import "../../../plugins/Bootstrap/scss/navbar";
+@import "../../../plugins/Bootstrap/scss/card";
+@import "../../../plugins/Bootstrap/scss/breadcrumb";
+@import "../../../plugins/Bootstrap/scss/pagination";
+@import "../../../plugins/Bootstrap/scss/badge";
+@import "../../../plugins/Bootstrap/scss/jumbotron";
+@import "../../../plugins/Bootstrap/scss/alert";
+@import "../../../plugins/Bootstrap/scss/progress";
+@import "../../../plugins/Bootstrap/scss/media";
+@import "../../../plugins/Bootstrap/scss/list-group";
+@import "../../../plugins/Bootstrap/scss/close";
+@import "../../../plugins/Bootstrap/scss/toasts";
+@import "../../../plugins/Bootstrap/scss/modal";
+@import "../../../plugins/Bootstrap/scss/tooltip";
+@import "../../../plugins/Bootstrap/scss/popover";
+@import "../../../plugins/Bootstrap/scss/carousel";
+@import "../../../plugins/Bootstrap/scss/spinners";
+@import "../../../plugins/Bootstrap/scss/utilities";
+@import "../../../plugins/Bootstrap/scss/print";
+
+
+// $fs: ("1": $h1-font-size, "2": $h2-font-size, "3": $h3-font-size, "4": $h4-font-size, "5": $h5-font-size, "6": $h6-font-size);
+
+
+// @each $number, $size in $fs {
+//     .fs-#{$number}{
+//         font-size: $size !important;
+//     }
+//     @each $breakpoint, $value in $grid-breakpoints {
+//         @media only screen and (min-width: map-get($map: $grid-breakpoints, $key: $breakpoint)){
+//             .fs-#{$breakpoint}-#{$number}{
+//                 font-size: $size !important;
+//             }
+//         }        
+//     }
+// }

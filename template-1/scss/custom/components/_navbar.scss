@@ -1,0 +1,46 @@
+@import url("https://cdn.jsdelivr.net/gh/fitodac/bsnav@master/dist/bsnav.min.css");
+
+.nav-item{
+    padding: 0 0.8em;
+    font-size: 2rem;
+}
+.navbar-nav .nav-item.active>.nav-link, .navbar-nav .nav-item:active:focus>.nav-link, .navbar-nav .nav-item:active>.nav-link, .navbar-nav .nav-item:focus>.nav-link, .navbar-nav .nav-item:hover>.nav-link{
+    color: $cyan !important;
+}
+.navbar-brand{
+    font-size: 2.5em;
+    color: white;
+}
+.affix {
+    background-color: $darker !important;
+    transition: all 0.5s ease-in-out;
+}
+.bsnav-mobile .navbar.bsnav-dark{
+    background: $darker !important;
+}
+.navbar {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
+}
+@media screen and (max-width:1365px) {
+    .navbar 
+        .nav-item{
+            padding: .5em .5em; 
+        }
+    
+        ul:first-child{
+            align-items: flex-end;
+        }
+
+        ul:last-child{
+            align-items: center;
+            padding: 0
+        }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1365px){
+    .nav-item{
+        padding: 0 .3em !important; 
+    }
+}

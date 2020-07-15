@@ -1,0 +1,30 @@
+@import "../../../plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.scss";
+
+.owl-nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 4rem;
+}
+.owl-dots{
+    text-align: center;
+}
+.owl-carousel button.owl-dot{
+    background-color: white !important;
+    padding: 0.6em !important;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    margin: 0 3px 0 3px;
+}
+.owl-carousel button.owl-dot.active{
+    background-color: darkcyan !important;
+    padding: 0.9em !important;
+}
+.owl-carousel .owl-item img{
+    height: 150px;
+    filter: brightness(0.4);
+    transition: filter 0.6s ease;
+}
+.owl-carousel .owl-item.active img{
+    filter: brightness(1);
+}
